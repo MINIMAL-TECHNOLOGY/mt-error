@@ -16,7 +16,11 @@ pnpm add https://github.com/MINIMAL-TECHNOLOGY/mt-error.git
 
 ```tsx
 import React from 'react';
-import { IClient, EventTypes, getErrorBoundaryTrace } from '@mt/error';
+import {
+  IClient,
+  EventTypes,
+  getErrorBoundaryTrace,
+} from '@minimaltech/error-browser';
 
 //----------------------------------------------
 interface IErrorBoundaryProps {
@@ -77,7 +81,7 @@ export class ErrorBoundary extends React.Component<
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ErrorBoundary } from './ErrorBoundary';
-import { MTError } from '@mt/error';
+import { MTError } from '@minimaltech/error-browser';
 import packageJson from '/package.json';
 
 export const client = MTError.init({
