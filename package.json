@@ -1,0 +1,43 @@
+{
+  "name": "@minimaltech/error-browser",
+  "version": "0.0.1",
+  "description": "Error handling library support for mt_crash_report",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint '**/*.{js,ts}'",
+    "lint:fix": "eslint '**/*.{js,ts}' --fix",
+    "prettier": "prettier '**/*.{js,ts}' --write",
+    "compile": "rm -rf /dist && tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint": "^8.57.0",
+    "typescript-eslint": "^7.15.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "engines": {
+    "pnpm": "9.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MINIMAL-TECHNOLOGY/mt-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MINIMAL-TECHNOLOGY/mt-error/issues"
+  },
+  "homepage": "https://github.com/MINIMAL-TECHNOLOGY/mt-error#readme",
+  "author": "Minimal Technology <developer@minimaltek.com>",
+  "license": "MIT"
+}
