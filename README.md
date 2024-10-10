@@ -24,7 +24,7 @@ import {
 
 //----------------------------------------------
 interface IErrorBoundaryProps {
-  client: IClient;
+  client: IClient | null;
   FallbackComponent?: React.ReactElement;
   children?: React.ReactNode;
 }
@@ -47,6 +47,10 @@ export class ErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error) {
     const { client } = this.props;
+
+    if (!client) {
+      return;
+    }
 
     const trace = getErrorBoundaryTrace({ error });
 
